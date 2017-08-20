@@ -1,0 +1,29 @@
+<ion-view view-title="Menü">
+  <ion-content>
+
+    <div class="card" ng-if="page.Choices != undefined">
+      <div class="item item-stable item-text-wrap"
+           ng-repeat="choice in page.Choices" ng-click="changePage(choice.Link)">
+        <p>{{choice.Content}}</p>
+      </div>
+    </div>
+
+    <div class="list" ng-if="page.Choices == undefined">
+      <div class="item" style="text-align: center;border-width: 0px;margin-top:80px;"
+           ng-click="callme(page)">
+        <p class="bigger" style="margin-bottom: 18px;">BENİ</p>
+        <select class="item item-select" style="margin: auto!important;">
+          <option>HEMEN</option>
+          <option>10 DAKİKA İÇİNDE</option>
+          <option>20 DAKİKA İÇİNDE</option>
+          <option>30 DAKİKA İÇİNDE</option>
+        </select>
+
+        <p class="bigger" style="margin-top: 18px;">ARA</p>
+      </div>
+      <div class="item item-image" style="margin-top:8px;border-width: 0px!important;" ng-click="callme()">
+        <img src="img/callme.png" style="width: 45%;text-align: center;"/>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

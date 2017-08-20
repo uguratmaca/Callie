@@ -1,0 +1,36 @@
+<ion-view view-title="Arama">
+  <ion-content>
+    <div ng-if="!selectedContent">
+      <div>
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" ng-model="search.key" placeholder="Aranacak Kelime">
+        </label>
+      </div>
+      <ul class="list">
+        <li class="item"
+            ng-click="setSelected(choice.Content);"
+            ng-repeat="choice in allChoices"
+            ng-if="choice.Content.toLowerCase().includes(search.key.toLowerCase())">
+          {{choice.Content}}
+        </li>
+      </ul>
+    </div>
+    <div ng-if="selectedContent">
+      <div class="item" style="text-align: center;border-width: 0px!important;margin-top:80px;">
+        <p class="bigger" style="margin-bottom: 18px;">BENİ</p>
+        <select class="item item-select" style="margin: auto!important;">
+          <option>HEMEN</option>
+          <option>10 DAKİKA İÇİNDE</option>
+          <option>20 DAKİKA İÇİNDE</option>
+          <option>30 DAKİKA İÇİNDE</option>
+        </select>
+
+        <p class="bigger" style="margin-top: 18px;">ARA</p>
+      </div>
+      <div class="item item-image" style="margin-top:8px;border-width: 0px!important;" ng-click="callme()">
+        <img src="img/callme.png" style="width: 45%;text-align: center;"/>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

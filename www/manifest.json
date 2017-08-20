@@ -1,0 +1,11 @@
+{
+  "name": "Callie",
+  "short_name": "Callie",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
